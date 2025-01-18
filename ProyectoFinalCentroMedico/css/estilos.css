@@ -8,10 +8,10 @@
 }
 
 #h6 {
-    text-align: center;             /* Centra el texto */
-    font-weight: bold;              /* Negrita en el texto */
-    color: #4f46e5;                 /* Color indigo-600 */
-    font-size: rem;                /* Aumenta el tamaño de la fuente (equivalente a 32px) */
+    text-align: center;             
+    font-weight: bold;              
+    color: #4f46e5;                
+    font-size: rem;                
 }
 
 #h1{
