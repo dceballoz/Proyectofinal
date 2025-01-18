@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+    </script>
+    
+</head>
+
+<body id="body">
+    <!--Main Navigation-->
+    <header>
+        <!-- Main navigation container -->
+        <nav class="flex-no-wrap relative flex w-full items-center justify-between bg-indigo-600 py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4"
+            data-twe-navbar-ref>
+            <div class="flex w-full flex-wrap items-center justify-between px-3">
+                <!-- Hamburger button for mobile view -->
+                <button
+                    class="block border-0 bg-transparent px-2 text-cyan-100 hover:no-underline hover:text-pink-500 focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                    type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent1"
+                    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- Hamburger icon -->
+                    <span class="[&>svg]:w-7">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                            <path fill-rule="evenodd"
+                                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- Collapsible navigation container -->
+                <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+                    id="navbarSupportedContent1" data-twe-collapse-item>
+                    <!-- Logo -->
+                    <a class="mb-4 me-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+                        href="#">
+                        <img src="https://cdn.icon-icons.com/icons2/944/PNG/512/medical-27_icon-icons.com_73934.png"
+                            style="height: 30px" alt="" loading="lazy" />
+                    </a>
+                    <!-- Left navigation links -->
+                    <ul class="list-style-none me-auto flex flex-col ps-0 lg:flex-row" data-twe-navbar-nav-ref>
+                        <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <!-- Dashboard link -->
+                            <a class="text-cyan-100 hover:text-pink-500 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                                href="#" data-twe-nav-link-ref>Dashboard</a>
+                        </li>
+                        <!-- Team link -->
+                        <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <a class="text-cyan-100 hover:text-pink-500 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                                href="#" data-twe-nav-link-ref>Team</a>
+                        </li>
+                        <!-- Projects link -->
+                        <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <a class="text-cyan-100 hover:text-pink-500 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                                href="#" data-twe-nav-link-ref>Projects</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right elements -->
+                <div class="relative flex items-center">
+                    <!-- Cart Icon -->
+                    <a class="me-4 text-cyan-100 hover:text-pink-500 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                        href="#">
+                        <span class="[&>svg]:w-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="h-5 w-5">
+                                <path
+                                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <!-- Container with two dropdown menus -->
+                    <div class="relative" data-twe-dropdown-ref>
+                        <!-- First dropdown trigger -->
+                        <a class="hidden-arrow me-4 flex items-center text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                            href="#" id="dropdownMenuButton1" role="button" data-twe-dropdown-toggle-ref
+                            aria-expanded="false">
+
+
+
+                        </a>
+                        <!-- First dropdown menu -->
+                        <ul class="absolute left-auto right-0 z-[1000] float-left m-0 mt-1 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-neutral-700"
+                            aria-labelledby="dropdownMenuButton1" data-twe-dropdown-menu-ref>
+                            <!-- First dropdown menu items -->
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Action</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Another action</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Second dropdown container -->
+                    <div class="relative" data-twe-dropdown-ref>
+                        <!-- Second dropdown trigger -->
+                        <a class="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+                            href="#" id="dropdownMenuButton2" role="button" data-twe-dropdown-toggle-ref
+                            aria-expanded="false">
+                            <!-- User avatar -->
+                            <img src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg" class="rounded-full"
+                                style="height: 25px; width: 25px" alt="" loading="lazy" />
+                        </a>
+                        <!-- Second dropdown menu -->
+                        <ul class="absolute left-auto right-0 z-[1000] float-left m-0 mt-1 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-neutral-700"
+                            aria-labelledby="dropdownMenuButton2" data-twe-dropdown-menu-ref>
+                            <!-- Second dropdown menu items -->
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Action</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Another action</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <header class="bg-indigo-600 text-white text-center py-12">
+        <h1 class="text-5xl font-extrabold">Servicios Odontológicos</h1>
+        <p class="mt-4 text-lg font-medium">Ofrecemos los mejores tratamientos para tu salud dental</p>
+    </header>
+
+    <!-- Sección de Servicios -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-600 mb-12">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Tarjeta de Servicio 1 -->
+                <div class="service-card bg-white rounded-lg shadow-xl p-6 hover:shadow-2xl cursor-pointer" data-name="Implantes Dentales" data-price="1200">
+                    <img src="https://via.placeholder.com/400x250" alt="Implantes Dentales" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-indigo-600">Implantes Dentales</h3>
+                    <p class="text-gray-600 mb-4">Restauramos dientes perdidos con implantes de alta calidad para una sonrisa natural.</p>
+                    <p class="text-lg font-semibold text-indigo-600">Precio: $1200</p>
+                </div>
+
+                <!-- Tarjeta de Servicio 2 -->
+                <div class="service-card bg-white rounded-lg shadow-xl p-6 hover:shadow-2xl cursor-pointer" data-name="Blanqueamiento Dental" data-price="400">
+                    <img src="https://via.placeholder.com/400x250" alt="Blanqueamiento Dental" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-indigo-600">Blanqueamiento Dental</h3>
+                    <p class="text-gray-600 mb-4">Recupera el brillo y la blancura de tus dientes con nuestro tratamiento de blanqueamiento seguro.</p>
+                    <p class="text-lg font-semibold text-indigo-600">Precio: $400</p>
+                </div>
+
+                <!-- Tarjeta de Servicio 3 -->
+                <div class="service-card bg-white rounded-lg shadow-xl p-6 hover:shadow-2xl cursor-pointer" data-name="Ortodoncia" data-price="1500">
+                    <img src="https://via.placeholder.com/400x250" alt="Ortodoncia" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-indigo-600">Ortodoncia</h3>
+                    <p class="text-gray-600 mb-4">Corrige problemas de alineación dental con nuestros tratamientos de ortodoncia personalizados.</p>
+                    <p class="text-lg font-semibold text-indigo-600">Precio: $1500</p>
+                </div>
+
+                <!-- Tarjeta de Servicio 4 -->
+                <div class="service-card bg-white rounded-lg shadow-xl p-6 hover:shadow-2xl cursor-pointer" data-name="Periodoncia" data-price="800">
+                    <img src="https://via.placeholder.com/400x250" alt="Periodoncia" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-indigo-600">Periodoncia</h3>
+                    <p class="text-gray-600 mb-4">Tratamientos especializados para encías sanas y prevenir enfermedades periodontales.</p>
+                    <p class="text-lg font-semibold text-indigo-600">Precio: $800</p>
+                </div>
+
+                <!-- Tarjeta de Servicio 5 -->
+                <div class="service-card bg-white rounded-lg shadow-xl p-6 hover:shadow-2xl cursor-pointer" data-name="Cirugía Oral" data-price="2500">
+                    <img src="https://via.placeholder.com/400x250" alt="Cirugía Oral" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-indigo-600">Cirugía Oral</h3>
+                    <p class="text-gray-600 mb-4">Realizamos procedimientos quirúrgicos con la mayor precisión y cuidado para tu salud.</p>
+                    <p class="text-lg font-semibold text-indigo-600">Precio: $2500</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón de Ver Carrito -->
+    <div class="fixed bottom-8 right-8 bg-indigo-600 text-white rounded-full p-4 cursor-pointer" id="view-cart-btn">
+        <span class="font-semibold">Ver Carrito</span>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+</body>
+
+</html>

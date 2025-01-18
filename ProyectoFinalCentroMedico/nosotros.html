@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+    </script>
+</head>
+
+<body id="body">
+    <!--Main Navigation-->
+    <header>
+        <!-- Main navigation container -->
+        <nav class="flex-no-wrap relative flex w-full items-center justify-between bg-indigo-600 py-2 shadow-md shadow-black/5 dark:bg-neutral-600 dark:shadow-black/10 lg:flex-wrap lg:justify-start lg:py-4"
+            data-twe-navbar-ref>
+            <div class="flex w-full flex-wrap items-center justify-between px-3">
+                <!-- Hamburger button for mobile view -->
+                <button
+                    class="block border-0 bg-transparent px-2 text-cyan-100 hover:no-underline hover:text-pink-500 focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                    type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent1"
+                    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- Hamburger icon -->
+                    <span class="[&>svg]:w-7">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                            <path fill-rule="evenodd"
+                                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+
+                <!-- Collapsible navigation container -->
+                <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+                id="navbarSupportedContent1" data-twe-collapse-item>
+                <!-- Logo -->
+                <a class="mb-4 me-2 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+                    href="#">
+                    <img src="https://cdn.icon-icons.com/icons2/944/PNG/512/medical-27_icon-icons.com_73934.png"
+                        style="height: 30px" alt="" loading="lazy" />
+                </a>
+                <!-- Left navigation links -->
+                <ul class="list-style-none me-auto flex flex-col ps-0 lg:flex-row" data-twe-navbar-nav-ref>
+                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                        <!-- INDICE-->
+                        <a class="text-cyan-100 hover:text-pink-500 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                            href="index.html" data-twe-nav-link-ref>INICIO</a>
+                    </li>
+                    <!-- NOSOTROS -->
+                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                        <a class="text-cyan-100 hover:text-pink-500 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                            href="nosotros.html" data-twe-nav-link-ref>NOSOTROS</a>
+                    </li>
+                
+                   
+                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                        <!-- ODONTOLOGIA -->
+                        <a class="text-cyan-100 hover:text-pink-500 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                            href="odontologia.html" data-twe-nav-link-ref>ODONTOLOGIA</a>
+                    </li>
+
+                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                        <!-- ODONTOLOGIA -->
+                        <a class="text-cyan-100 hover:text-pink-500 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-zinc-400"
+                            href="carrito.html" data-twe-nav-link-ref>PAQUETES ODONTOLOGICOS</a>
+                    </li>
+
+                
+                </ul>
+            </div>
+
+                <!-- Right elements -->
+                <div class="relative flex items-center">
+                    <!-- Cart Icon -->
+                    <a class="me-4 text-cyan-100 hover:text-pink-500 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                        href="#">
+                        <span class="[&>svg]:w-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="h-5 w-5">
+                                <path
+                                    d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <!-- Container with two dropdown menus -->
+                    <div class="relative" data-twe-dropdown-ref>
+                        <!-- First dropdown trigger -->
+                        <a class="hidden-arrow me-4 flex items-center text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                            href="#" id="dropdownMenuButton1" role="button" data-twe-dropdown-toggle-ref
+                            aria-expanded="false">
+
+
+
+                        </a>
+                        <!-- First dropdown menu -->
+                        <ul class="absolute left-auto right-0 z-[1000] float-left m-0 mt-1 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-neutral-700"
+                            aria-labelledby="dropdownMenuButton1" data-twe-dropdown-menu-ref>
+                            <!-- First dropdown menu items -->
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Action</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Another action</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Second dropdown container -->
+                    <div class="relative" data-twe-dropdown-ref>
+                        <!-- Second dropdown trigger -->
+                        <a class="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
+                            href="#" id="dropdownMenuButton2" role="button" data-twe-dropdown-toggle-ref
+                            aria-expanded="false">
+                            <!-- User avatar -->
+                            <img src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg" class="rounded-full"
+                                style="height: 25px; width: 25px" alt="" loading="lazy" />
+                        </a>
+                        <!-- Second dropdown menu -->
+                        <ul class="absolute left-auto right-0 z-[1000] float-left m-0 mt-1 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-neutral-700"
+                            aria-labelledby="dropdownMenuButton2" data-twe-dropdown-menu-ref>
+                            <!-- Second dropdown menu items -->
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Action</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Another action</a>
+                            </li>
+                            <li>
+                                <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                                    href="#" data-twe-dropdown-item-ref>Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de Encabezado -->
+    <header class="bg-indigo-600 text-white text-center py-16">
+        <h1 class="text-5xl font-extrabold">Centro Médico Metropolitano</h1>
+        <p class="mt-4 text-lg font-medium">Cuidamos tu salud con dedicación y excelencia</p>
+    </header>
+
+    <!-- Sección de Quiénes Somos -->
+    <section class="py-16 px-6 bg-white text-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-600 mb-8">¿Quiénes Somos?</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <!-- Imagen de Quiénes Somos -->
+                <div class="flex justify-center">
+                    <img class="w-full h-auto rounded-lg shadow-xl" src="https://colmed.com.ec/wp-content/uploads/2022/01/conusltas-medicas-centro-medico-colmed.jpg" alt="Imagen Quiénes Somos">
+                </div>
+                <!-- Texto de Quiénes Somos -->
+                <div>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Somos un centro médico dedicado a ofrecer atención médica de alta calidad. Nuestro equipo de profesionales está comprometido con la salud y el bienestar de nuestros pacientes. Nos enfocamos en brindar un servicio integral y personalizado, utilizando tecnología avanzada y prácticas de salud innovadoras.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Con una amplia variedad de especialidades médicas, nos esforzamos por ofrecer soluciones efectivas para cada uno de nuestros pacientes. La confianza y la seguridad de nuestros pacientes son nuestras principales prioridades.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Misión -->
+    <section class="py-16 px-6 bg-indigo-50 text-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-600 mb-8">Nuestra Misión</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <!-- Imagen de Misión -->
+                <div class="flex justify-center">
+                    <img class="w-full h-auto rounded-lg shadow-xl" src="https://colmed.com.ec/wp-content/uploads/2022/01/neurologia-colmed.jpg" alt="Imagen Misión">
+                </div>
+                <!-- Texto de Misión -->
+                <div>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Nuestra misión es ofrecer atención médica integral y de calidad a todos nuestros pacientes. Contamos con un equipo altamente capacitado que trabaja con pasión para garantizar un servicio de salud eficiente, accesible y seguro.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Nos comprometemos a cuidar de la salud de nuestra comunidad, brindando soluciones efectivas y tratamientos innovadores para garantizar una atención oportuna y especializada en todas las áreas de la medicina.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Visión -->
+    <section class="py-16 px-6 bg-white text-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-indigo-600 mb-8">Nuestra Visión</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <!-- Imagen de Visión -->
+                <div class="flex justify-center">
+                    <img class="w-full h-auto rounded-lg shadow-xl" src="https://colmed.com.ec/wp-content/uploads/2022/02/Aprende_inmunologia.jpg" alt="Imagen Visión">
+                </div>
+                <!-- Texto de Visión -->
+                <div>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Ser un centro médico líder en la región, reconocido por nuestra excelencia en el cuidado de la salud. Buscamos expandir nuestra presencia, ofreciendo atención médica de alta calidad, siempre con un enfoque en el bienestar y la satisfacción de nuestros pacientes.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Nos esforzamos por ser el centro médico de confianza, garantizando una atención humana, accesible y profesional en todas nuestras especialidades. Queremos ser reconocidos por nuestra innovación y por el impacto positivo en la vida de las personas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light py-6 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-gray-600 mb-4">Contactanos: <strong>099999999</strong> | Correo: <a
+                    href="mailto:informacion@techwave" class="text-blue-500">informacion@cmmq.com</p>
+
+           
+            <p class="text-gray-600 text-sm">© 2025 Cmmq. Todos los derechos reservados.</p>
+
+            
+            <div class="mt-4">
+                <a href="https://facebook.com" target="_blank" class="text-blue-600 hover:text-blue-800 mx-3">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="text-blue-400 hover:text-blue-600 mx-3">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-pink-500 hover:text-pink-700 mx-3">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-blue-700 hover:text-blue-900 mx-3">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+</body>
+
+</html>
